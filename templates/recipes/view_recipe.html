@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <h2>{{ recipe_details.title }}</h2>
+  <img
+    src="{{ recipe_details.image }}"
+    alt="{{ recipe_details.title }}"
+    class="img-fluid"
+  />
+
+  <h3>Ingredients:</h3>
+  <ul>
+    {% for ingredient in ingredients %}
+    <li>{{ ingredient }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Instructions:</h3>
+  <ol>
+    {% for step in instructions %}
+    <li>{{ step }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>Total Nutrition:</h3>
+  <ul>
+    {% for nutrient in total_nutrition %}
+    <li>{{ nutrient.name }} - {{ nutrient.amount }} {{ nutrient.unit }}</li>
+    {% endfor %}
+  </ul>
+
+  {% if add_to_saved_recipes %}
+  <form
+    method="POST"
+    action="{{ url_for('save_recipe', recipe_id=recipe_id) }}"
+  >
+    <input type="hidden" name="recipe_id" value="{{ recipe_id }}" />
+    <button type="submit" class="btn btn-primary">Save Recipe</button>
+  </form>
+  {% else %}
+  <p>You've already saved this recipe!</p>
+  {% endif %}
+</div>
+{% endblock %}

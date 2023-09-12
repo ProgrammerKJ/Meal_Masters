@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <h2>Your Saved Recipes</h2>
+
+  {% if saved_recipes %}
+  <ul class="list-group">
+    {% for recipe in saved_recipes %}
+    <li class="list-group-item saved-recipe">
+      <div class="recipe-details">
+        <h3>{{ recipe.title }}</h3>
+        <img
+          src="{{ recipe.image }}"
+          alt="{{ recipe.title }}"
+          class="img-fluid recipe-image"
+        />
+        <p class="recipe-section">Ingredients:</p>
+        <ul class="recipe-list">
+          {% for ingredient in recipe.unique_ingredients %}
+          <li>{{ ingredient }}</li>
+          {% endfor %}
+        </ul>
+
+        <p class="recipe-section">Instructions:</p>
+        <ol class="recipe-list">
+          {% for step in recipe.unique_instructions.split('\n') %}
+          <li>{{ step }}</li>
+          {% endfor %}
+        </ol>
+        <p class="recipe-section">Total Nutrition:</p>
+        <ul class="recipe-list">
+          {% for nutrient in recipe.nutrition %} {% if nutrient.name in
+          ["Calories", "Fat", "Saturated Fat", "Carbohydrates", "Net
+          Carbohydrates", "Sugar", "Cholesterol", "Sodium", "Protein"] %}
+          <li>
+            {{ nutrient.name }} - {{ nutrient.amount }} {{ nutrient.unit }}
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+
+      <form
+        method="POST"
+        action="{{ url_for('remove_saved_recipe', recipe_id=recipe.id) }}"
+      >
+        <input type="hidden" name="recipe_id" value="{{ recipe.id }}" />
+        <button type="submit" class="btn btn-danger remove-button">
+          Remove Recipe
+        </button>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% else %}
+  <p>You haven't saved any recipes yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

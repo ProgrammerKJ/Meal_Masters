@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mt-5">
+  <div class="text-center mb-4">
+    <h1>Weight Entry</h1>
+  </div>
+  <form method="POST" class="mt-4" id="weight-form">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      <label for="date">Date</label>
+      {{ form.date(class="form-control form-control-sm",
+      placeholder="YYYY-MM-DD") }}
+    </div>
+    <div class="form-group">
+      <label for="weight">Current Weight (lbs)</label>
+      {{ form.weight(class="form-control form-control-sm", placeholder="Enter
+      current weight") }}
+    </div>
+    <div class="form-group">
+      <label for="goal_weight">Goal Weight (lbs)</label>
+      {{ form.goal_weight(class="form-control form-control-sm",
+      placeholder="Enter goal weight") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

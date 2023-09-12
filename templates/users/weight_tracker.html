@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block content %}
+<div class="container weight-tracker-container">
+  <div>
+    <h1>Weight Tracker</h1>
+  </div>
+  <br />
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Weight (lbs)</th>
+        <th>Goal Weight (lbs)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in weight_entries %}
+      <tr>
+        <td>{{ entry.date.strftime("%Y-%m-%d") }}</td>
+        <td>{{ entry.weight }}</td>
+        <td>{{ entry.goal_weight }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div>
+    <a href="{{ url_for('weight_entry') }}" class="btn btn-primary"
+      >Add Weight Entry</a
+    >
+  </div>
+</div>
+{% endblock %}
