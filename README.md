@@ -56,11 +56,3 @@ To get started with Meal Masters, follow these steps:
 - **Shopping List**: Add ingredients from your meal plan to your shopping list. Take it with you when you go grocery shopping.
 
 ---
-
-Bon appétit! Enjoy your culinary journey with Meal Masters. If you have any questions, encounter issues, or want to contribute, please feel free to reach out.
-
-![Meal Masters](link_to_app_screenshot_or_logo.png)
-
----
-
-**Note**: Replace placeholders like `YourUsername`, `link_to_app_screenshot_or_logo.png`, and others with actual content specific to your GitHub repository and project.
