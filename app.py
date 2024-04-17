@@ -16,7 +16,8 @@ app = Flask(__name__)
 app.debug = True
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Lukadon1996$@localhost/fitness_app'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Lukadon1996$@localhost/fitness_app'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://kfvmfvmz:4mUqTDX3PjemP58zn7Z-DgHy6_7kRHjU@kala.db.elephantsql.com/kfvmfvmz'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = False
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False

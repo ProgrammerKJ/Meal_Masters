@@ -1,7 +1,6 @@
 import unittest
 from app import app, db
-from models import User, Recipe, SavedRecipe, WeightEntry
-from datetime import date
+from models import User
 
 class TestRoutes(unittest.TestCase):
     def setUp(self):
@@ -26,13 +25,30 @@ class TestRoutes(unittest.TestCase):
         response = self.client.get('/signup')
         self.assertEqual(response.status_code, 200)
 
+        # Simulate user registration
+        data = {
+            'username': 'testuser',
+            'email': 'test@example.com',
+            'password': 'testpassword'
+        }
+        response = self.client.post('/signup', data=data, follow_redirects=True)
+        self.assertEqual(response.status_code, 200)  # Assuming successful registration
+
     def test_login_route(self):
         response = self.client.get('/login')
         self.assertEqual(response.status_code, 200)
 
+        # Simulate user login
+        data = {
+            'username': 'testuser',
+            'password': 'testpassword'
+        }
+        response = self.client.post('/login', data=data, follow_redirects=True)
+        self.assertEqual(response.status_code, 200)  # Assuming successful login
+
     def test_logout_route(self):
         response = self.client.get('/logout')
-        self.assertEqual(response.status_code, 302)  
+        self.assertEqual(response.status_code, 302)  # Redirect to login
 
 
 if __name__ == '__main__':
