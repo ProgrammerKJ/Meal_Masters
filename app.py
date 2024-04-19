@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from config import SPOONACULAR_API_KEY
 
-from models import User, Recipe, db, connect_db, SavedRecipe, WeightEntry
+from models import User, db, connect_db, SavedRecipe, WeightEntry
 from forms import UserSignupForm, UserLoginForm, UserEditForm, RecipeSearchForm, WeightEntryForm
 
 CURR_USER_KEY = "curr_user"

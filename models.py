@@ -17,10 +17,6 @@ class User(db.Model):
     image_url = db.Column(
         db.Text, default="/static/images/default_user_icon.png")
 
-    current_weight = db.Column(db.Float, nullable=True)
-    goal_weight = db.Column(db.Float, nullable=True)
-    current_body_fat = db.Column(db.Float, nullable=True)
-    goal_body_fat = db.Column(db.Float, nullable=True)
 
     saved_recipe_ids = db.relationship(
         'SavedRecipe', back_populates='user', cascade='all, delete-orphan'
@@ -72,11 +68,6 @@ class WeightEntry(db.Model):
     goal_weight = db.Column(db.Float)
 
 
-class Recipe(db.Model):
-
-    __tablename__ = 'recipes'
-
-    recipe_id = db.Column(db.Integer, primary_key=True)
 
 
 def connect_db(app):

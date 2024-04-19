@@ -1,6 +1,6 @@
 import unittest
 from app import app, db
-from models import User, Recipe, SavedRecipe, WeightEntry
+from models import User, SavedRecipe, WeightEntry
 
 class TestModels(unittest.TestCase):
     def setUp(self):
@@ -31,15 +31,6 @@ class TestModels(unittest.TestCase):
             self.assertEqual(user.username, 'testuser333')
             self.assertEqual(user.email, 'test@example.com')
 
-    def test_recipe_model(self):
-        with app.app_context():  # Ensure we are in the application context
-            recipe = Recipe()
-            db.session.add(recipe)
-            db.session.commit()
-
-            queried_recipe = Recipe.query.first()
-
-            self.assertEqual(recipe, queried_recipe)
 
     def test_saved_recipe_model(self):
         with app.app_context():  # Ensure we are in the application context
