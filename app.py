@@ -23,7 +23,6 @@ app.config['SQLALCHEMY_ECHO'] = False
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 app.config['SECRET_KEY'] = "it's a secret"
 
-toolbar = DebugToolbarExtension(app)
 
 
 with app.app_context():
@@ -278,7 +277,7 @@ def search_results():
     return render_template('recipes/search_results.html', recipes=recipes, page=page, total_pages=total_pages, total_results=total_results)
 
 
-@app.route('/recipe/<int:recipe_id>', methods=['GET', 'POST'])
+@app.route('/recipe/<int:recipe_id>', methods=['GET'])
 def view_recipe(recipe_id):
     base_url = f'https://api.spoonacular.com/recipes/{recipe_id}/information'
     params = {
@@ -320,18 +319,6 @@ def view_recipe(recipe_id):
 
         add_to_saved_recipes = True
 
-        if request.method == 'POST':
-            user = g.user
-            recipe = Recipe.query.get_or_404(recipe_id)
-
-            if recipe not in user.saved_recipes:
-
-                user.saved_recipes.append(recipe)
-                db.session.commit()
-                flash("Recipe saved successfully!", "success")
-                add_to_saved_recipes = False
-            else:
-                flash("Recipe already saved.", "warning")
 
         return render_template('recipes/view_recipe.html', recipe_details=recipe_details, ingredients=ingredients, instructions=instructions, total_nutrition=filtered_nutrition, add_to_saved_recipes=add_to_saved_recipes, recipe_id=recipe_id)
 

@@ -32,7 +32,7 @@ class TestRoutes(unittest.TestCase):
             'password': 'testpassword'
         }
         response = self.client.post('/signup', data=data, follow_redirects=True)
-        self.assertEqual(response.status_code, 200)  # Assuming successful registration
+        self.assertEqual(response.status_code, 200)  
 
     def test_login_route(self):
         response = self.client.get('/login')
@@ -44,7 +44,7 @@ class TestRoutes(unittest.TestCase):
             'password': 'testpassword'
         }
         response = self.client.post('/login', data=data, follow_redirects=True)
-        self.assertEqual(response.status_code, 200)  # Assuming successful login
+        self.assertEqual(response.status_code, 200)  
 
     def test_logout_route(self):
         response = self.client.get('/logout')

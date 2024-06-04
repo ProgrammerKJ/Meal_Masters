@@ -1,107 +1,129 @@
+/* General Styles */
 body {
-  font-family: "Merienda", cursive;
-  font-size: large;
-  color: rgb(255, 140, 0);
-  background-color: #005a9c;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navbar */
 .custom-navbar {
-  background-color: rgb(255, 140, 0);
-}
-
-.custom-nav-link {
-  color: #005a9c;
+  background-color: #007bff;
+  padding: 10px;
 }
 
 .custom-navbar .nav-link {
-  color: black;
+  color: #ffffff;
+  margin-right: 15px;
+  text-decoration: none;
 }
 
 .custom-navbar .nav-link:hover {
-  color: #005a9c;
-}
-
-.custom-nav-link:hover {
   color: #ff9900;
 }
 
-#login-form .form-group {
-  width: 300px;
-}
-
-#signup-form .form-group {
-  width: 300px;
-}
-
-#edit-profile-form .form-group {
-  width: 300px;
-}
-
+/* Forms */
+#login-form .form-group,
+#signup-form .form-group,
+#edit-profile-form .form-group,
 #weight-form .form-group {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 15px;
 }
 
 #login-form,
 #signup-form,
 #edit-profile-form,
 #weight-form {
-  max-width: 300px;
-  margin: 0 auto;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Search Results */
 .search-results .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .search-results h2 {
   font-size: 24px;
   margin-top: 20px;
+  color: #007bff;
+  text-align: center; /* Align heading with the centered content */
 }
 
 .search-results ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search-results li {
+  width: 90%;
+  max-width: 700px;
   margin: 20px 0;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
+  background-color: #d9eaf7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the text within the card */
 }
 
-.search-results a {
-  color: orange;
-  text-decoration: none;
-}
-
-.search-results a:hover {
-  background-color: transparent;
-}
-
-.search-results li img.img-thumbnail {
-  max-width: 400px;
-  max-height: 400px;
-  margin-right: 10px;
-}
-
-.search-results p {
+.search-results li h3 {
+  margin-bottom: 10px;
   font-size: 20px;
 }
 
+.search-results li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.search-results li a:hover {
+  color: #ff5733;
+  text-decoration: underline;
+}
+
+.search-results li img.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto; /* Center the image within the card */
+}
+
+.search-results li p {
+  font-size: 16px;
+  color: #333;
+}
+
 .search-results .btn-primary {
-  background-color: rgb(255, 140, 0);
+  background-color: #007bff;
   color: #fff;
   border: none;
 }
 
 .search-results .btn-primary:hover {
-  background-color: white;
+  background-color: #0056b3;
 }
 
+/* Saved Recipes */
 .saved-recipe {
-  background-color: #b2ffff;
+  background-color: #ffffff;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 5px;
@@ -113,8 +135,8 @@ body {
 }
 
 .recipe-image {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100%;
+  height: auto;
   margin-right: 10px;
 }
 
@@ -132,13 +154,17 @@ body {
   margin-top: 10px;
 }
 
+/* Quotes */
 .quote {
   font-size: 24px;
   font-weight: bold;
   margin: 20px 0;
   padding: 20px;
   border-left: 5px solid #007bff;
-  background-color: #f8f8f8;
+  background-color: #d9eaf7;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .author {
@@ -147,38 +173,46 @@ body {
   color: #007bff;
 }
 
+/* Calorie Link */
 .calorie-link {
+  display: block;
   color: #007bff;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
-
-  padding: 5px 10px;
-  background-color: #f8f8f8;
+  padding: 10px 20px;
+  background-color: #d9eaf7;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
 .calorie-link:hover {
   color: #ff5733;
-  background-color: transparent;
+  background-color: #f0f0f0;
 }
 
+/* Centered Content */
 .center-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-align: center;
 }
 
+/* Table */
 table {
   width: 100%;
   max-width: 800px;
   border-collapse: collapse;
-  margin: 0 auto;
-  background-color: #f7f7f7;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 table th {
-  background-color: #343a40;
+  background-color: #007bff;
   color: white;
   padding: 10px;
   text-align: left;
@@ -189,16 +223,23 @@ table td {
   border-bottom: 1px solid #ddd;
 }
 
+/* Buttons */
 .btn-primary {
   background-color: #007bff;
   color: white;
   border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 5px; /* Add margin for spacing */
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
 }
 
+/* Weight Tracker */
 .weight-tracker-container {
   text-align: center;
   margin-top: 20px;
@@ -213,4 +254,72 @@ table td {
 
 .weight-tracker-container .btn-primary:hover {
   background-color: #0056b3;
+}
+
+/* Welcome Container */
+.welcome-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.welcome-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.welcome-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.user-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Fitness Quote */
+.fitness-quote {
+  background-color: #d9eaf7; /* Light blue shade */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.author {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #007bff;
+}
+
+/* Calorie Links */
+.calorie-link {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  padding: 10px 20px;
+  background-color: #d9eaf7; /* Light blue shade */
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.calorie-link:hover {
+  color: #ff5733;
+  background-color: #f0f0f0;
 }

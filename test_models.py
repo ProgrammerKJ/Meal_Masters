@@ -21,7 +21,7 @@ class TestModels(unittest.TestCase):
         self.app_context.pop() 
 
     def test_user_model(self):
-        with app.app_context():  # Ensure we are in the application context
+        with app.app_context():  
             user = User.signup('testuser333', 'test@example.com', 'password')
             db.session.commit()
 
@@ -33,7 +33,7 @@ class TestModels(unittest.TestCase):
 
 
     def test_saved_recipe_model(self):
-        with app.app_context():  # Ensure we are in the application context
+        with app.app_context():  
             user = User.signup('testuser', 'test@example.com', 'password')
             db.session.commit()
 
@@ -48,7 +48,7 @@ class TestModels(unittest.TestCase):
             self.assertEqual(saved_recipe.recipe_id, 1)
 
     def test_weight_entry_model(self):
-        with app.app_context():  # Ensure we are in the application context
+        with app.app_context():  
             user = User.signup('testuser', 'test@example.com', 'password')
             db.session.commit()
 

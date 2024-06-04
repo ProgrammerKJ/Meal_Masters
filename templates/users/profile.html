@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% block content %}
-<div class="container">
+<div class="container welcome-container">
   <h1>Welcome {{ user.username }}</h1>
-  <p>Lets Reach Those Fitness Goals!</p>
-  <img src="{{ user.image_url }}" alt="User Image" />
+  <p>Let's Reach Those Fitness Goals!</p>
+  <img src="{{ user.image_url }}" alt="User Image" class="user-image" />
 
   <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container">
@@ -45,12 +45,12 @@
   </div>
   <br />
   <a class="calorie-link" href="https://gravitus.com/tools/cutting-calculator/"
-    >Click On This Link To Find Out You're Daily Caloric Needs!</a
+    >Click On This Link To Find Out Your Daily Caloric Needs!</a
   >
   <br />
   <br />
   <a class="calorie-link" href="https://www.bizcalcs.com/body-fat-navy/"
-    >Click On This Link To Calculate You're Body Fat Percentage!</a
+    >Click On This Link To Calculate Your Body Fat Percentage!</a
   >
   <br />
   <br />
