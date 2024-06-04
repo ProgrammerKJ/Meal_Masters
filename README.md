@@ -1,5 +1,7 @@
 # Meal Masters - Your Recipe and Diet Tracking App
 
+## Application is Deployed HERE: https://meal-masters.onrender.com 
+
 Meal Masters is a web-based application that empowers users to discover, plan, and track their culinary journey. Whether you're a seasoned chef or a cooking novice, Meal Masters has something for you. With Meal Masters, you can:
 
 - **Search for Recipes**: Explore a vast collection of recipes using the Spoonacular API. Find recipes that match your dietary preferences, cuisine choices, or ingredients on hand.
