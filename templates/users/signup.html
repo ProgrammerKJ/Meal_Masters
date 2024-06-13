@@ -1,26 +1,21 @@
 {% extends "base.html" %} {% block content %}
 <div class="container mt-5">
-  <div class="text-center mb-4">
-    <h2>Sign Up</h2>
-  </div>
-  <form
-    method="POST"
-    action="{{ url_for('signup') }}"
-    class="mt-4"
-    id="signup-form"
-  >
-    {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
-    'hidden' %} {% for error in field.errors %}
-    <span class="text-danger">{{ error }}</span>
-    {% endfor %}
-
-    <div class="form-group">
-      {{ field.label(class="form-label") }} {{ field(class="form-control",
-      placeholder="Enter your " + field.name) }}
+  <div class="signup-container">
+    <div class="signup-title">
+      <h2>Sign Up</h2>
     </div>
-    {% endfor %}
-
-    <button type="submit" class="btn btn-primary">Sign Up</button>
-  </form>
+    <form method="POST" action="{{ url_for('signup') }}" id="signup-form">
+      {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
+      'hidden' %} {% for error in field.errors %}
+      <div class="alert alert-danger" role="alert">{{ error }}</div>
+      {% endfor %}
+      <div class="form-group">
+        {{ field.label(class="form-label") }} {{ field(class="form-control
+        custom-input", placeholder="Enter your " + field.name) }}
+      </div>
+      {% endfor %}
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
 </div>
 {% endblock %}

@@ -1,9 +1,15 @@
 {% extends "base.html" %} {% block content %}
 <div class="container center-content text-center">
-  <h1 class="display-4">Welcome to Meal Master!</h1>
-  <p>Your personal dieting hub!</p>
-  <p>Create meal plans to help you reach that fitness goal of yours!</p>
-  <div id="imageSlider" class="carousel slide" data-ride="carousel">
+  <h1 class="display-4 welcome-heading">Welcome to Meal Master!</h1>
+  <p class="lead welcome-subheading">Your personal dieting hub!</p>
+  <p class="lead welcome-description">
+    Create meal plans to help you reach that fitness goal of yours!
+  </p>
+  <div
+    id="imageSlider"
+    class="carousel slide carousel-container"
+    data-ride="carousel"
+  >
     <ol class="carousel-indicators">
       <li data-target="#imageSlider" data-slide-to="0" class="active"></li>
       <li data-target="#imageSlider" data-slide-to="1"></li>
@@ -109,5 +115,4 @@
     </script>
   </div>
 </div>
-
 {% endblock %}

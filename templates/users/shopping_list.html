@@ -1,23 +1,29 @@
 {% extends "base.html" %} {% block content %}
-<div class="container mt-5 text-center">
-  <h1>My Shopping List</h1>
-  <br />
-  <div class="input-group mb-3 mx-auto" style="max-width: 300px">
-    <input
-      type="text"
-      id="itemInput"
-      class="form-control"
-      placeholder="Add an item"
-      aria-label="Add an item"
-      aria-describedby="addItemButton"
-    />
-    <div class="input-group-append">
-      <button class="btn btn-primary" type="button" id="addItemButton">
-        Add
-      </button>
+<div class="container mt-5">
+  <h1 class="text-center mb-4">My Shopping List</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="itemInput"
+          class="form-control"
+          placeholder="Add an item"
+          aria-label="Add an item"
+          aria-describedby="addItemButton"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" id="addItemButton">
+            Add
+          </button>
+        </div>
+      </div>
     </div>
   </div>
+
   <ul id="itemList" class="list-group"></ul>
+
   <div class="text-center mt-3">
     <button class="btn btn-danger" id="clearListButton">
       Clear Shopping List
@@ -26,13 +32,4 @@
 </div>
 
 <script src="static/js/script.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const savedItems = localStorage.getItem("shoppingList");
-    if (savedItems) {
-      document.getElementById("itemList").innerHTML = savedItems;
-    }
-  });
-</script>
-
 {% endblock %}

@@ -1,53 +1,228 @@
 /* General Styles */
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Merienda", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #f0f8ff; /* Light blue color */
   margin: 0;
   padding: 0;
+}
+
+/* Login Page Styles */
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff; /* Blue color */
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.login-container .custom-input::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.login-container .btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-container .btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Sign-Up Page Styles */
+.signup-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff; /* Blue color */
+}
+
+.signup-container .form-group {
+  margin-bottom: 20px;
+}
+
+.signup-container .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.signup-container .custom-input::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.signup-container .btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signup-container .btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.alert {
+  margin-bottom: 15px;
+}
+
+/* Edit Profile Page Styles */
+.edit-profile-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-profile-container .text-center h2 {
+  color: #007bff; /* Blue color */
+}
+
+.edit-profile-container .form-group {
+  margin-bottom: 20px;
+}
+
+.edit-profile-container .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.edit-profile-container .custom-input::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.edit-profile-container .btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-profile-container .btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.edit-profile-container .alert {
+  margin-top: 5px;
 }
 
 /* Navbar */
 .custom-navbar {
   background-color: #007bff;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-navbar .btn-nav {
+  color: #ffffff;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.custom-navbar .btn-nav:hover {
+  background-color: #0056b3;
+  color: #ff9900;
+  transform: scale(1.1);
 }
 
 .custom-navbar .nav-link {
   color: #ffffff;
-  margin-right: 15px;
-  text-decoration: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .custom-navbar .nav-link:hover {
   color: #ff9900;
-}
-
-/* Forms */
-#login-form .form-group,
-#signup-form .form-group,
-#edit-profile-form .form-group,
-#weight-form .form-group {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 15px;
-}
-
-#login-form,
-#signup-form,
-#edit-profile-form,
-#weight-form {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffff;
+  background-color: #0056b3;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
 }
 
-/* Search Results */
-.search-results .container {
+/* Slider Hover Effects */
+.carousel-container {
+  border: 5px solid #007bff; /* Border around the carousel */
+  border-radius: 10px; /* Optional: Rounded corners */
+  padding: 10px; /* Optional: Padding inside the border */
+  background-color: #ffffff; /* Optional: Background color inside the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.carousel-item img {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* Welcome Text */
+.welcome-heading {
+  font-size: 48px;
+  color: #007bff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-subheading,
+.welcome-description {
+  font-size: 24px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Page Styles */
+.welcome-container {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -57,101 +232,11 @@ body {
   text-align: center;
 }
 
-.search-results h2 {
-  font-size: 24px;
-  margin-top: 20px;
-  color: #007bff;
-  text-align: center; /* Align heading with the centered content */
-}
-
-.search-results ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.search-results li {
-  width: 90%;
-  max-width: 700px;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #d9eaf7;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center the text within the card */
-}
-
-.search-results li h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.search-results li a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.search-results li a:hover {
-  color: #ff5733;
-  text-decoration: underline;
-}
-
-.search-results li img.img-thumbnail {
+.user-image {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-  display: block;
-  margin: 10px auto; /* Center the image within the card */
-}
-
-.search-results li p {
-  font-size: 16px;
-  color: #333;
-}
-
-.search-results .btn-primary {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-}
-
-.search-results .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-/* Saved Recipes */
-.saved-recipe {
-  background-color: #ffffff;
   margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-details {
-  margin-bottom: 20px;
-}
-
-.recipe-image {
-  max-width: 100%;
-  height: auto;
-  margin-right: 10px;
-}
-
-.recipe-section {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.recipe-list {
-  list-style: none;
-  padding: 0;
-}
-
-.remove-button {
-  margin-top: 10px;
 }
 
 /* Quotes */
@@ -190,6 +275,23 @@ body {
   background-color: #f0f0f0;
 }
 
+/* Buttons */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 10px 5px; /* Add margin for spacing */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
 /* Centered Content */
 .center-content {
   display: flex;
@@ -200,27 +302,69 @@ body {
   text-align: center;
 }
 
-/* Table */
-table {
-  width: 100%;
+/* Form Styles */
+#weight-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Ensure form labels and inputs are left-aligned */
+}
+
+#weight-form .form-group {
+  margin-bottom: 20px;
+}
+
+#weight-form label {
+  font-weight: bold;
+}
+
+#weight-form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Weight Tracker Styles */
+.weight-tracker-container {
   max-width: 800px;
-  border-collapse: collapse;
   margin: 20px auto;
+  padding: 20px;
   background-color: #ffffff;
   border-radius: 5px;
-  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-table th {
+.weight-tracker-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  background-color: #ffffff; /* White background for the table */
+}
+
+.table th,
+.table td {
+  padding: 12px; /* Increased padding for better readability */
+  text-align: center;
+}
+
+.table th {
   background-color: #007bff;
   color: white;
-  padding: 10px;
-  text-align: left;
 }
 
-table td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #ddd;
 }
 
 /* Buttons */
@@ -231,95 +375,233 @@ table td {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   margin: 10px 5px; /* Add margin for spacing */
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
+  transform: scale(1.1);
 }
 
-/* Weight Tracker */
-.weight-tracker-container {
-  text-align: center;
-  margin-top: 20px;
+/* Search Recipe Form Styles */
+.search-recipe-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.weight-tracker-container .btn-primary {
+.search-recipe-container h2 {
+  font-size: 32px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.btn-primary {
   background-color: #007bff;
   color: white;
   border: none;
-  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.weight-tracker-container .btn-primary:hover {
+.btn-primary:hover {
   background-color: #0056b3;
+  transform: scale(1.1);
 }
 
-/* Welcome Container */
-.welcome-container {
+/* Search Results Page Styles */
+.search-results {
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 30px;
   background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.welcome-container h1 {
+.recipe-list {
+  padding: 0;
+}
+
+.recipe-item {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-item:hover {
+  transform: translateY(-5px); /* Move up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.recipe-title a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.recipe-title a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.recipe-image {
+  margin-bottom: 10px;
+}
+
+.recipe-summary {
+  font-size: 16px;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Recipe Details Page Styles */
+.recipe-details {
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-title {
   font-size: 32px;
-  margin-bottom: 20px;
   color: #007bff;
-}
-
-.welcome-container p {
-  font-size: 18px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.user-image {
+.img-fluid {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-/* Fitness Quote */
-.fitness-quote {
-  background-color: #d9eaf7; /* Light blue shade */
-  padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.quote {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
+.ingredients-list,
+.instructions-list,
+.nutrition-list {
+  list-style-type: none;
   padding: 0;
-  color: #333;
 }
 
-.author {
+.ingredients-list li,
+.instructions-list li,
+.nutrition-list li {
   font-size: 18px;
-  margin-top: 10px;
-  color: #007bff;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-/* Calorie Links */
-.calorie-link {
-  display: block;
+.total-nutrition {
+  margin-top: 20px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
   color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  padding: 10px 20px;
-  background-color: #d9eaf7; /* Light blue shade */
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
   border-radius: 5px;
-  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.calorie-link:hover {
-  color: #ff5733;
-  background-color: #f0f0f0;
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.recipe-section {
+  margin-bottom: 20px;
+}
+
+/* Shopping List Page Styles */
+#itemInput {
+  border-radius: 5px 0 0 5px;
+}
+
+#addItemButton {
+  border-radius: 0 5px 5px 0;
+}
+
+#clearListButton {
+  margin-top: 20px;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.list-group-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.list-group-item span {
+  flex-grow: 1;
+}
+
+.list-group-item button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .recipe-details {
+    padding: 20px;
+  }
 }

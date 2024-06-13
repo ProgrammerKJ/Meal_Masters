@@ -21,21 +21,21 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand btn-nav" href="/">Home</a>
       <ul class="navbar-nav ml-auto">
         {% if not g.user %}
         <li class="nav-item">
-          <a class="nav-link custom-nav-link" href="/login">Login</a>
+          <a class="nav-link btn-nav" href="/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link custom-nav-link" href="/signup">Sign Up</a>
+          <a class="nav-link btn-nav" href="/signup">Sign Up</a>
         </li>
         {% else %}
         <li class="nav-item">
-          <a class="nav-link custom-nav-link" href="/logout">Logout</a>
+          <a class="nav-link btn-nav" href="/logout">Logout</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link custom-nav-link" href="/users/{{ g.user.user_id }}"
+          <a class="nav-link btn-nav" href="/users/{{ g.user.user_id }}"
             >View Profile</a
           >
         </li>

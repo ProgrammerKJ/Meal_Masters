@@ -1,31 +1,36 @@
 {% extends "base.html" %} {% block content %}
 <div class="container search-results">
-  <h2>Search Results</h2>
-  <ul>
+  <h2 class="text-center mb-4">Search Results</h2>
+  <ul class="list-unstyled recipe-list">
     {% for recipe in recipes %}
-    <li>
-      <h3>
+    <li class="recipe-item">
+      <h3 class="recipe-title">
         <a href="{{ url_for('view_recipe', recipe_id=recipe.id) }}"
           >{{ recipe.title }}</a
         >
       </h3>
       {% if recipe.image %}
-      <img
-        src="{{ recipe.image }}"
-        alt="{{ recipe.title }}"
-        class="img-thumbnail"
-      />
+      <div class="recipe-image">
+        <img
+          src="{{ recipe.image }}"
+          alt="{{ recipe.title }}"
+          class="img-thumbnail"
+        />
+      </div>
       {% endif %}
-      <p>{{ recipe.summary }}</p>
+      <p class="recipe-summary">{{ recipe.summary }}</p>
     </li>
     {% endfor %}
   </ul>
   {% if page < total_pages %}
-  <a
-    href="{{ url_for('search_results', page=page+1, total_results=total_results) }}"
-    class="btn btn-primary"
-    >Next</a
-  >
+  <div class="text-center mt-4">
+    <a
+      href="{{ url_for('search_results', page=page+1, total_results=total_results) }}"
+      class="btn btn-primary btn-lg"
+    >
+      Next
+    </a>
+  </div>
   {% endif %}
 </div>
 {% endblock %}
