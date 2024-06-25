@@ -1,5 +1,6 @@
 # Meal Masters - Your Recipe and Diet Tracking App
 
+## Video Walkthrough HERE: https://www.loom.com/share/c4aa7d9e35c24ec5832cdf50c5bd368d?sid=40d42fe1-5764-459b-b8ec-549effb7375f
 ## Application is Deployed HERE: https://meal-masters.onrender.com 
 
 Meal Masters is a web-based application that empowers users to discover, plan, and track their culinary journey. Whether you're a seasoned chef or a cooking novice, Meal Masters has something for you. With Meal Masters, you can:
